@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main
+{
+
+        public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите сумму которыую вы хотите вложить: ");
+        double start = in.nextDouble();
+        double end = 1000000;
+        double bankYear = 0.1;
+        int years = 0;
+        while (start < end) {
+        start += start * bankYear;
+        years++;
+        }
+        System.out.println("Через " + years + " лет на счету будет " + start + " рублей.");
+    }
+}
